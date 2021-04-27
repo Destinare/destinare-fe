@@ -1,22 +1,32 @@
 import React, { Component } from "react";
-import ItemPage from "./ItemPage";
+import WeatherItem from "./WeatherItem";
+import EventItem from "./EventItem";
+import ParkItem from "./ParkItem";
+import RestaurantItem from "./RestaurantItem"
 
 export default class ListPage extends Component {
   render() {
+    const weatherResults = this.props.results[0];
+    const parksResults = this.props.results[1];
+    const eventsResults = this.props.results[2];
+    const restaurantsResults = this.props.results[3];
+
+if(this.props.results[0]) {
     return (
       <div>
         <div className="weather">
-          {this.props.results.map((weather) => (
-            <ItemPage
+          {weatherResults.map((weather) => (
+          <WeatherItem
               temp={weather.temperature}
               date={weather.date}
               cast={weather.forecast}
-            />
-          ))}
+            />)
+          )}
+          
         </div>
         <div className="parkList">
-          {this.props.results.map((park) => (
-            <ItemPage
+          {parksResults.map((park) => (
+            <ParkItem
               pName={park.parkName}
               pWeb={park.website}
               pUrl={park.image}
@@ -24,8 +34,8 @@ export default class ListPage extends Component {
           ))}
         </div>
         <div className="eventList">
-          {this.props.results.map((event) => (
-            <ItemPage
+          {eventsResults.map((event) => (
+            <EventItem
               eName={event.venueName}
               eWeb={event.website}
               eDate={event.date}
@@ -34,8 +44,8 @@ export default class ListPage extends Component {
           ))}
         </div>
         <div className="restaurantList">
-          {this.props.results.map((restaurant) => (
-            <ItemPage
+          {restaurantsResults.map((restaurant) => (
+            <RestaurantItem
               rName={restaurant.restaurantName}
               rWeb={restaurant.website}
               rUrl={restaurant.image}
@@ -44,5 +54,7 @@ export default class ListPage extends Component {
         </div>
       </div>
     );
-  }
+  } else {
+    return null
+  }}
 }
