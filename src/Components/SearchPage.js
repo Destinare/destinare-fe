@@ -21,7 +21,7 @@ export default class SearchPage extends Component {
       results,
     });
   };
-
+  
   handleChange = (e) => {
     this.setState({
       search: e.target.value,

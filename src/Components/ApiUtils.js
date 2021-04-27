@@ -1,6 +1,6 @@
 import request from "superagent";
 
-const URL = "https://destinare-app.herokuapp.com";
+const URL = "http://localhost:7850";
 
 export async function getAllTheDataFromTheBackEndAndTransferItToTheFrontEndPleaseWork(
   city,
