@@ -6,7 +6,7 @@ export default class ListPage extends Component {
     return (
       <div>
         <div className="weather">
-          {this.props.weatherResults.map((weather) => (
+          {this.props.results.map((weather) => (
             <ItemPage
               temp={weather.temperature}
               date={weather.date}
@@ -15,7 +15,7 @@ export default class ListPage extends Component {
           ))}
         </div>
         <div className="parkList">
-          {this.props.parkResults.map((park) => (
+          {this.props.results.map((park) => (
             <ItemPage
               pName={park.parkName}
               pWeb={park.website}
@@ -24,7 +24,7 @@ export default class ListPage extends Component {
           ))}
         </div>
         <div className="eventList">
-          {this.props.eventResults.map((event) => (
+          {this.props.results.map((event) => (
             <ItemPage
               eName={event.venueName}
               eWeb={event.website}
@@ -34,7 +34,7 @@ export default class ListPage extends Component {
           ))}
         </div>
         <div className="restaurantList">
-          {this.props.restaurantResults.map((restaurant) => (
+          {this.props.results.map((restaurant) => (
             <ItemPage
               rName={restaurant.restaurantName}
               rWeb={restaurant.website}
