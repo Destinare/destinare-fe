@@ -22,6 +22,8 @@ export default class SearchPage extends Component {
     });
   };
   
+
+
   handleChange = (e) => {
     this.setState({
       search: e.target.value,
@@ -33,9 +35,11 @@ export default class SearchPage extends Component {
   };
 
   render() {
+    console.log(this.state.results.city)
     return (
       <div>
         <h1>Welcome to Destinare!</h1>
+        <div className = 'search-bar'>
         <input
           onChange={this.handleChange}
           className="input"
@@ -46,8 +50,11 @@ export default class SearchPage extends Component {
         <button className="button" onClick={this.handleClick}>
           Search
         </button>
+        </div>
+        <h2>Search Results</h2>
         <div className="results">
-          <h2>Search Results</h2>
+
+          
           <ListPage results={this.state.results} />
         </div>
       </div>

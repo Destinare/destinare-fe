@@ -13,8 +13,9 @@ export default class ListPage extends Component {
 
 if(this.props.results[0]) {
     return (
-      <div>
-        <div className="weather">
+      <div className= 'results-container'>
+        <div className="weatherList">
+        <h3>Weather</h3>
           {weatherResults.map((weather) => (
           <WeatherItem
               temp={weather.temperature}
@@ -25,6 +26,7 @@ if(this.props.results[0]) {
           
         </div>
         <div className="parkList">
+          <h3>National Parks</h3>
           {parksResults.map((park) => (
             <ParkItem
               pName={park.parkName}
@@ -34,6 +36,7 @@ if(this.props.results[0]) {
           ))}
         </div>
         <div className="eventList">
+          <h3>Events</h3>
           {eventsResults.map((event) => (
             <EventItem
               eName={event.venueName}
@@ -44,6 +47,7 @@ if(this.props.results[0]) {
           ))}
         </div>
         <div className="restaurantList">
+          <h3>Restaurants</h3>
           {restaurantsResults.map((restaurant) => (
             <RestaurantItem
               rName={restaurant.restaurantName}

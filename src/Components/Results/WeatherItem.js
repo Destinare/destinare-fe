@@ -5,9 +5,12 @@ export default class WeatherItem extends Component {
     return (
       <div>
         <div className="weatherItem">
-          <p>Temperature: {this.props.temp}</p>
-          <p>Date: {this.props.date}</p>
-          <p>Forecast: {this.props.cast}</p>
+          <p>{this.props.date}</p>
+          <p>{this.props.temp} °F
+</p>
+          <p>{this.props.cast}</p>
+          <hr/>
+          <br/>
         </div>
       </div>
     );
