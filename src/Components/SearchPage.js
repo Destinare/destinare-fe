@@ -44,7 +44,7 @@ export default class SearchPage extends Component {
           onChange={this.handleChange}
           className="input"
           value={this.state.search}
-          placeholder="City and state"
+          placeholder="City and State"
           name="search"
         />
         <button className="button" onClick={this.handleClick}>
