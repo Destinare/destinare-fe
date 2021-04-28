@@ -5,13 +5,16 @@ export default class ParkItem extends Component {
         return (
             <div>
                 <div className="parksItem">
-                    <p>Park Name: {this.props.pName}</p>
+                    <p>{this.props.pName}</p>
+                    <img className="image" src={this.props.pUrl} alt={this.props.pName} />
                     <a href={this.props.pWeb}>
                         <p>Website</p>
                     </a>
-                    <img className="image" src={this.props.pUrl} alt={this.props.pName} />
                 </div>
+                <hr/>
+                <br/>
             </div>
         )
+
     }
 }

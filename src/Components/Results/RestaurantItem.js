@@ -5,12 +5,14 @@ export default class RestaurantItem extends Component {
         return (
             <div>
                 <div className="restaurantsItem">
-                    <p>Restaurant Name: {this.props.rName}</p>
+                    <p>{this.props.rName}</p>
+                    <img className="image" alt={this.props.rName} src={this.props.rUrl} />
                     <a href={this.props.rWeb}>
                         <p>Website</p>
                     </a>
-                    <img className="image" alt={this.props.rName} src={this.props.rUrl} />
                 </div>
+                <hr/>
+                <br/>
             </div>
         )
     }

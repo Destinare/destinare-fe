@@ -5,13 +5,16 @@ export default class EventItem extends Component {
         return (
             <div>
                 <div className="eventsItem">
-                    <p>Venue Name: {this.props.eName}</p>
+                    
+                    <p> {this.props.eName}</p>
+                    <p>{this.props.eDate}</p>
+                    <p>{this.props.eTime}</p>
+                   
                     <a href={this.props.eWeb}>
                         <p>Website</p>
                     </a>
-                    <p>
-                        Date &#38; time: {this.props.eDate}, {this.props.eTime}
-                    </p>
+                    <hr/>
+                    <br/>
                 </div>
             </div>
         )

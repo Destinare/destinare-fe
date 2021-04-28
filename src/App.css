@@ -1,8 +1,90 @@
-body, html {
-  height: 80%;
-  width: 80%;
+body {
+--wild-blue-yonder: #8ea4d2ff;
+--glaucous: #6279b8ff;
+--independence: #49516fff;
+--hookers-green: #496f5dff;
+--shiny-shamrock: #4c9f70ff;
+--black-olive: #37392eff;
+--blue-sapphire: #19647eff;
+--verdigris: #28afb0ff;
+--pale-silver: #ddcecdff;
+--isabelline: #eee5e5ff;
 }
+
+body, html {
+  height: 100%;
+  width: 100%;
+  background-color: var(--isabelline);
+}
+
+body, input, button {
+  font-family: 'Nanum Gothic', sans-serif;
+}
+
+input, button, .search-bar {
+  text-align: center;
+}
+
+h1, h2 {
+  text-align: center;
+  color: var(--independence);
+  
+}
+
+h3 {
+  color: var(--hookers-green);
+}
+
+a {
+  color: var(--glaucous);
+  text-decoration: none;
+}
+
+p {
+  color: var(--black-olive);
+}
+
+a > p {
+color: var(--glaucous);
+}
+
+hr {
+  color: lightgrey;
+  width: 25%;
+  text-align: center;
+}
+
 .image {
   height: 200px;
   width: auto;
+  border-radius: 10px;
 }
+
+.results-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 25px;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.results {
+  width: 100%;
+}
+
+.weatherList {
+  text-align: center;
+}
+
+.parkList {
+  text-align: center;
+}
+
+.eventList {
+  text-align: center;
+}
+
+.restaurantList {
+  text-align: center;  
+}
+
