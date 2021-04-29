@@ -2,7 +2,7 @@ import request from "superagent";
 
 const URL = "https://destinare-app.herokuapp.com";
 
-export async function getAllTheDataFromTheBackEndAndTransferItToTheFrontEndPleaseWork(
+export async function getAllTheDataFromTheBackEndAndTransferItToTheFrontEnd(
   city,
   state
 ) {
