@@ -1,34 +1,39 @@
 body {
---wild-blue-yonder: #8ea4d2ff;
---glaucous: #6279b8ff;
---independence: #49516fff;
---hookers-green: #496f5dff;
---shiny-shamrock: #4c9f70ff;
---black-olive: #37392eff;
---blue-sapphire: #19647eff;
---verdigris: #28afb0ff;
---pale-silver: #ddcecdff;
---isabelline: #eee5e5ff;
+  --wild-blue-yonder: #8ea4d2ff;
+  --glaucous: #6279b8ff;
+  --independence: #49516fff;
+  --hookers-green: #496f5dff;
+  --shiny-shamrock: #4c9f70ff;
+  --black-olive: #37392eff;
+  --blue-sapphire: #19647eff;
+  --verdigris: #28afb0ff;
+  --pale-silver: #ddcecdff;
+  --isabelline: #eee5e5ff;
 }
 
-body, html {
+body,
+html {
   height: 100%;
   width: 100%;
   background-color: var(--isabelline);
 }
 
-body, input, button {
-  font-family: 'Nanum Gothic', sans-serif;
+body,
+input,
+button {
+  font-family: "Nanum Gothic", sans-serif;
 }
 
-input, button, .search-bar {
+input,
+button,
+.search-bar {
   text-align: center;
 }
 
-h1, h2 {
+h1,
+h2 {
   text-align: center;
   color: var(--independence);
-  
 }
 
 h3 {
@@ -45,7 +50,7 @@ p {
 }
 
 a > p {
-color: var(--glaucous);
+  color: var(--glaucous);
 }
 
 hr {
@@ -85,7 +90,7 @@ hr {
 }
 
 .restaurantList {
-  text-align: center;  
+  text-align: center;
 }
 
 .spinner {
@@ -93,4 +98,21 @@ hr {
   justify-content: center;
   align-items: center;
 }
+img {
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+}
 
+.container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  text-align: center;
+  grid-gap: 20px;
+  padding: 20px;
+}
+
+.profile > a > img {
+  height: 50px;
+  width: 50px;
+}
