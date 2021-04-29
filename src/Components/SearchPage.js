@@ -70,7 +70,6 @@ export default class SearchPage extends Component {
           {this.state.loading === false && (
             <ListPage results={this.state.results} />
           )}
-          <ListPage results={this.state.results} />
         </div>
       </div>
     );
