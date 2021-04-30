@@ -46,6 +46,7 @@ export default class SearchPage extends Component {
     this.setState({ loading: true });
     await this.searchResult(city, state);
     this.setState({ loading: false });
+    this.setState({ search: "" });
   };
 
   render() {
